@@ -5,7 +5,7 @@ Remove-Item -Path .\publish -Recurse -ErrorAction SilentlyContinue
 
 Write-Host "Building ..."
 dotnet restore
-dotnet publish -c Release -o ./publish
+dotnet publish -c Release -p:MvcRazorCompileOnPublish=true -o ./publish
 
 
 Write-Host "Zipping ..."
